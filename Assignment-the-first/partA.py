@@ -53,7 +53,8 @@ class Demultiplexing():
         qr2_list = list()
         qi1_list = list()
         qi2_list = list()
-
+	
+	#Iterate through the records of all the files
         for counts, lines in enumerate(readFiles(self.files)): 
             # Assign First header
 
@@ -73,6 +74,7 @@ class Demultiplexing():
                 #qi2 = lines[2].rstrip()     
                 #qr2 = lines[3].rstrip()
                
+		# Update the sum list as you go through the records
                 qr1_list, q1_count = updateQuality(qr1, qr1_list)
                 num_qr1 += q1_count
                 qr2_list, q2_count = updateQuality(qr2, qr2_list)
@@ -81,7 +83,8 @@ class Demultiplexing():
                 num_qi1 += q3_count
                 qi2_list, q4_count = updateQuality(qi2, qi2_list)
                 num_qi2 += q4_count
-
+	
+	# Average the Quality Scores
         qr1_list = averageQualityScore(qr1_list, num_qr1)
         qr2_list = averageQualityScore(qr2_list, num_qr2)
         qi1_list = averageQualityScore(qi1_list, num_qi1)
