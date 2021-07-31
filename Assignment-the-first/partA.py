@@ -1,7 +1,7 @@
 import gzip
 from itertools import zip_longest
 import sys
-import pprint
+#import pprint
 
 #r1,i1,i2, r2
 
