@@ -28,8 +28,8 @@ zcat /projects/bgmp/shared/2017_sequencing/1294_S1_L008_R3_001.fastq.gz | sed -n
 
 Part 2 – Develop an algorithm to de-multiplex the samples
 ```
-1) Fix index swapping algorithmically
-2) 2 Fastq files per bin, one contain r1 the other containing r2. A total of 24x2(2x2) = 52 fastq output files
+1) Fix index swapping algorithmically. Index swapping happens in RNA-seq lab, my algorithm will be used to see if an index was properly ligated and see where the reads came from.
+2) 2 Fastq files per bin, one contain r1 the other containing r2. A total of 24x2(2(swap/bad) x 2(r1/r2)) = 52 fastq output files
 3) zcat <file> | sed -n '2~4p' to create unit files
 4) Pseudocode located in responsitory in the form of a pdf doc
 ```
