@@ -1,3 +1,4 @@
+```
 Bin	Percentage
 swap	0.17
 not_good	16.78
@@ -26,3 +27,4 @@ A7	0.92
 B10	2.92
 A8	2.19
 Amount of index swapping: 617939
+```
