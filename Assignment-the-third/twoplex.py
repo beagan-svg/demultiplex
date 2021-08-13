@@ -234,7 +234,7 @@ class Demultiplexing():
                         c1 = i1.intersection(self.index_library)    # Index library includes reverse complements of index
                         c2 = i2.intersection(self.index_library)    # This is why my i2 does not need to be reverse complement in this step
 
-                        # Checks to see if index 1 and index 2 map to a index in the library
+                        # Checks to see if index 1 and index 2 reverse comp are the same
                         if c1 and c2:
                             c2 = {ReverseComplement(str_i2)}
                             c3 = c1.intersection(c2)
